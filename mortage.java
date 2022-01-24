@@ -1,4 +1,4 @@
-package com.test;
+package com.codetest;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
