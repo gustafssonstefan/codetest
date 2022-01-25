@@ -38,10 +38,10 @@ String[] ary = inputLine.split(splitBy);    // use comma as separator
 
 String name = ary[0];
 float loan = Float.parseFloat(ary[1]);
-float AnnualInterest = Float.parseFloat(ary[2]) / 100;           //Get the value in percentage              
+float annualInterest = Float.parseFloat(ary[2]) / 100;           //Get the value in percentage              
 int numberOfPayments = Integer.parseInt(ary[3]) * MONTHS_YEAR;   //Amount of payment in total
-float MonthlyInterest =  AnnualInterest / MONTHS_YEAR;  
-double monthlyPayment = loan * ((MonthlyInterest * (Math.pow(1 + MonthlyInterest, numberOfPayments))) / ((Math.pow(1 + MonthlyInterest, numberOfPayments)) -1));
+float monthlyInterest =  annualInterest / MONTHS_YEAR;  
+double monthlyPayment = loan * ((monthlyInterest * (Math.pow(1 + monthlyInterest, numberOfPayments))) / ((Math.pow(1 + monthlyInterest, numberOfPayments)) -1));
 
 //NumberFormat n = NumberFormat.getCurrencyInstance();
 DecimalFormat formatter = new DecimalFormat("###,###.00");  
