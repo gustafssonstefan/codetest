@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.text.NumberFormat;
 import java.util.Locale;
+import java.text.DecimalFormat;
 
 public class mortage {
   
@@ -42,8 +43,9 @@ int numberOfPayments = Integer.parseInt(ary[3]) * MONTHS_YEAR;   //Amount of pay
 float MonthlyInterest =  AnnualInterest / MONTHS_YEAR;  
 double monthlyPayment = loan * ((MonthlyInterest * (Math.pow(1 + MonthlyInterest, numberOfPayments))) / ((Math.pow(1 + MonthlyInterest, numberOfPayments)) -1));
 
-NumberFormat n = NumberFormat.getCurrencyInstance();
-System.out.println("Name: " + name.replace("\"", "") + " ||" + " Fixed monthly payment: " + n.format(monthlyPayment));
+//NumberFormat n = NumberFormat.getCurrencyInstance();
+DecimalFormat formatter = new DecimalFormat("###,###.00");  
+System.out.println("Name: " + name.replace("\"", "") + " ||" + " Fixed monthly payment: " + formatter.format(monthlyPayment) + " €");
 
 }
 reader.close();
