@@ -9,4 +9,4 @@
 
 4. Install the dependencies with command: gradlew build
 
-3. Run application with command: java -jar build\libs\codetest.jar
+5. Run application with command: java -jar build\libs\codetest.jar
