@@ -3,8 +3,6 @@ package com.codetest;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.text.DecimalFormat;
 
 public class mortage {
@@ -43,9 +41,8 @@ int numberOfPayments = Integer.parseInt(ary[3]) * MONTHS_YEAR;   //Amount of pay
 float monthlyInterest =  annualInterest / MONTHS_YEAR;  
 double monthlyPayment = loan * ((monthlyInterest * (Math.pow(1 + monthlyInterest, numberOfPayments))) / ((Math.pow(1 + monthlyInterest, numberOfPayments)) -1));
 
-//NumberFormat n = NumberFormat.getCurrencyInstance();
 DecimalFormat formatter = new DecimalFormat("###,###.00");  
-System.out.println("Name: " + name.replace("\"", "") + " ||" + " Fixed monthly payment: " + n.format(monthlyPayment) + " €");
+System.out.println("Name: " + name.replace("\"", "") + " ||" + " Fixed monthly payment: " + formatter.format(monthlyPayment) + " €");
 
 }
 reader.close();
