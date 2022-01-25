@@ -45,7 +45,7 @@ double monthlyPayment = loan * ((monthlyInterest * (Math.pow(1 + monthlyInterest
 
 //NumberFormat n = NumberFormat.getCurrencyInstance();
 DecimalFormat formatter = new DecimalFormat("###,###.00");  
-System.out.println("Name: " + name.replace("\"", "") + " ||" + " Fixed monthly payment: " + formatter.format(monthlyPayment) + " €");
+System.out.println("Name: " + name.replace("\"", "") + " ||" + " Fixed monthly payment: " + n.format(monthlyPayment) + " €");
 
 }
 reader.close();
