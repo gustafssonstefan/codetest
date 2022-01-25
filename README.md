@@ -1,8 +1,12 @@
 # codetest
 
 
-1. Open CMD and type cd \ then clone this repository with command: git clone https://github.com/gustafssonstefan/codetest.git
+1. Open CMD and type cd \ 
+ 
+2. Then clone this repository with command: git clone https://github.com/gustafssonstefan/codetest.git
 
-2. Install the dependencies wiht command: cd codetest then gradlew build
+3. Change to correct folder with command: cd codetest
 
-3. Run application with: java -jar build\libs\codetest.jar
+4. Install the dependencies with command: gradlew build
+
+3. Run application with command: java -jar build\libs\codetest.jar
